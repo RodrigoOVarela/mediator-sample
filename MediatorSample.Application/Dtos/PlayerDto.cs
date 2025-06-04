@@ -1,4 +1,4 @@
-﻿namespace MediatorSample.Application.DTOs;
+﻿namespace MediatorSample.Application.Dtos;
 
 public class PlayerDto
 {

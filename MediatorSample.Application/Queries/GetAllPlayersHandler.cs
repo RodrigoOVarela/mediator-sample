@@ -1,8 +1,8 @@
 ﻿using MediatR;
-using MediatorSample.Application.DTOs;
-using MediatorSample.Application.Queries;
+using MediatorSample.Application.Handlers;
+using MediatorSample.Application.Dtos;
 
-namespace MediatorSample.Application.Handlers;
+namespace MediatorSample.Application.Queries;
 
 public class GetAllPlayersHandler : IRequestHandler<GetAllPlayersQuery, List<PlayerDto>>
 {
