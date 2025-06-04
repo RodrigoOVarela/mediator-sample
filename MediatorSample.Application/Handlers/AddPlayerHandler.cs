@@ -6,7 +6,9 @@ namespace MediatorSample.Application.Handlers;
 
 public class AddPlayerHandler : IRequestHandler<AddPlayerCommand, Guid>
 {
-    private static readonly List<Player> _players = new();
+    // TODO: Propriedade pública apenas para facilitar testes. 
+    // Futuramente, será substituída por acesso via repositório.
+    public static readonly List<Player> _players = new();
 
     public Task<Guid> Handle(AddPlayerCommand request, CancellationToken cancellationToken)
     {
@@ -25,4 +27,6 @@ public class AddPlayerHandler : IRequestHandler<AddPlayerCommand, Guid>
     }
 
     public static IReadOnlyList<Player> GetPlayers() => _players.AsReadOnly();
+
+    public static void ClearPlayers() => _players.Clear();
 }
